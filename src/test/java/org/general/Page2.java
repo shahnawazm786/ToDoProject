@@ -39,5 +39,6 @@ public class Page2 {
         for(String s:uniqueString){
             System.out.println(s);
         }
+        driver.quit();
     }
 }

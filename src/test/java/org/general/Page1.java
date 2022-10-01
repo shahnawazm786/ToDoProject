@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class Page1 {
-   WebDriver driver=Hooks.driver;
+   WebDriver driver;//=Hooks.driver;
     @BeforeTest
     public void startApps(){
         //WebDriverManager.chromedriver().setup();
