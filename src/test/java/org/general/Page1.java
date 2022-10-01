@@ -12,13 +12,13 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class Page1 {
-   WebDriver driver;
+   WebDriver driver=Hooks.driver;
     @BeforeTest
     public void startApps(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        //WebDriverManager.chromedriver().setup();
+        //driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://google.co.in");
 
     }
@@ -63,8 +63,8 @@ public class Page1 {
                 }).sendKeys("Kaz Onlinne"+Keys.ENTER);
 
     }
-    @AfterTest
+    /*@AfterTest
     public void quitApps(){
     driver.quit();
-    }
+    }*/
 }
