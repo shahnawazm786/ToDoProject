@@ -45,7 +45,13 @@ public class Page1 {
 
          */
         // use multiline lambda function
-        
+        new WebDriverWait(driver,Duration.ofSeconds(20))
+                .until(d->{
+                    d.navigate().refresh();
+                    return d.findElement(By.name("q"));
+                        }).sendKeys("Kaz Onlinne"+Keys.ENTER);
+   // element.sendKeys("Kaz Online"+Keys.ENTER);
+
     }
     @AfterTest
     public void quitApps(){
