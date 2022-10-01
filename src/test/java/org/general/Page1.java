@@ -1,10 +1,7 @@
 package org.general;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,6 +31,10 @@ public class Page1 {
                 .sendKeys("KAZ Online" + Keys.ENTER);
         */
         //  use of function interface
+        JavascriptExecutor jse=(JavascriptExecutor)driver;
+        String jscript="arguments[0].remove()";
+        jse.executeScript(jscript,element);
+
         new WebDriverWait(driver,Duration.ofSeconds(20))
                 .until(d->d.findElement(By.name("q")));
                 element.sendKeys("KAZ Online" + Keys.ENTER);
