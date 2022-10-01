@@ -45,12 +45,22 @@ public class Page1 {
 
          */
         // use multiline lambda function
-        new WebDriverWait(driver,Duration.ofSeconds(20))
+        /*new WebDriverWait(driver,Duration.ofSeconds(20))
                 .until(d->{
                     d.navigate().refresh();
                     return d.findElement(By.name("q"));
-                        }).sendKeys("Kaz Onlinne"+Keys.ENTER);
+                        }).sendKeys("Kaz Onlinne"+Keys.ENTER); */
    // element.sendKeys("Kaz Online"+Keys.ENTER);
+
+        new WebDriverWait(driver,Duration.ofSeconds(20))
+                .until(d->{
+                    if(!d.findElements(By.name("q")).isEmpty()){
+                        return d.findElement(By.name("q"));
+                    }else {
+                        d.navigate().refresh();
+                        return null;
+                    }
+                }).sendKeys("Kaz Onlinne"+Keys.ENTER);
 
     }
     @AfterTest
