@@ -34,6 +34,6 @@ public class Page1 {
     }
     @AfterTest
     public void quitApps(){
-    //driver.quit();
+    driver.quit();
     }
 }
