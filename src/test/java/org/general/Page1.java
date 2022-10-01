@@ -28,9 +28,15 @@ public class Page1 {
     @Test
     public void searchTest(){
         WebElement element=driver.findElement(By.name("q"));
-        new WebDriverWait(driver,Duration.ofSeconds(20))
+
+        /*new WebDriverWait(driver,Duration.ofSeconds(20))
                 .until(ExpectedConditions.visibilityOf(element))
                 .sendKeys("KAZ Online" + Keys.ENTER);
+        */
+        //  use of function interface
+        new WebDriverWait(driver,Duration.ofSeconds(20))
+                .until(d->d.findElement(By.name("q")));
+                element.sendKeys("KAZ Online" + Keys.ENTER);
     }
     @AfterTest
     public void quitApps(){
