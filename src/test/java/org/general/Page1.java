@@ -31,10 +31,12 @@ public class Page1 {
         jse.executeScript(jscript,element);
 
 
-        new WebDriverWait(driver,Duration.ofSeconds(20))
+       /* new WebDriverWait(driver,Duration.ofSeconds(20))
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(TimeoutException.class)
                 .until(ExpectedConditions.visibilityOf(element))
                 .sendKeys("KAZ Online" + Keys.ENTER);
-
+        */
         //  use of function interface
 
         /*new WebDriverWait(driver,Duration.ofSeconds(20))
@@ -42,6 +44,8 @@ public class Page1 {
                 element.sendKeys("KAZ Online" + Keys.ENTER);
 
          */
+        // use multiline lambda function
+        
     }
     @AfterTest
     public void quitApps(){
