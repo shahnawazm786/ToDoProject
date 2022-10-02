@@ -22,7 +22,7 @@ public class MoveLeftToRight {
         //WebElement element=driver.findElement(By.xpath("//span[text()='var scroll =  document.documentElement.scrollHeight;window.scrollTo(0, scroll); return scroll;']"));
         JavascriptExecutor jse1=(JavascriptExecutor)driver;
         //String script1="arguments[0].scrollIntoView(true)";
-        String script1="window.scrollTo(0,1500)";
+        String script1="window.scrollTo(0,1000)";
         jse1.executeScript(script1,element);
 
         JavascriptExecutor jse=(JavascriptExecutor) driver;
