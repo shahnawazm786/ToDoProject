@@ -24,6 +24,7 @@ public class MoveLeftToRight {
         //String script1="arguments[0].scrollIntoView(true)";
         String script1="window.scrollTo(0,1000)";
         jse1.executeScript(script1,element);
+        
 
         JavascriptExecutor jse=(JavascriptExecutor) driver;
         //String script="arguments[0].scrollIntoView(true);";
