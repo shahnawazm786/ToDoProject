@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ConsumerClassExampleInSelenium {
     public static void main(String[] args) {
@@ -14,8 +15,10 @@ public class ConsumerClassExampleInSelenium {
         WebDriver driver=new ChromeDriver();
         driver.get("https://amazon.in");
         List<WebElement> elements=driver.findElements(By.xpath("//a"));
-        for(int i=0; i<elements.size();i++){
+        /*for(int i=0; i<elements.size();i++){
             System.out.println(elements.get(i).getText());
-        }
+        }*/
+        Consumer<WebElement> consumer=(element)-> System.out.println(element.getText());
+        elements.forEach(consumer);
     }
 }
