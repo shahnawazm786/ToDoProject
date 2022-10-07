@@ -20,5 +20,12 @@ public class ConsumerClassExampleInSelenium {
         }*/
         Consumer<WebElement> consumer=(element)-> System.out.println(element.getText());
         elements.forEach(consumer);
+        // Multiline Consumer for remove blanks
+        Consumer<WebElement> consumer1= (element)->{
+            if(!element.getText().isEmpty()){
+                System.out.println(element.getText());
+            }
+        };
+        elements.forEach(consumer1);
     }
 }
