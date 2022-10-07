@@ -14,7 +14,7 @@ public class ConsumerClassExample {
         //name.forEach(c-> System.out.println(c));
         Consumer<String> con1=(c)->System.out.println(c.toUpperCase());
         name.forEach(con1);
-        
+        name.forEach(con.andThen(con1));
 
     }
 }
