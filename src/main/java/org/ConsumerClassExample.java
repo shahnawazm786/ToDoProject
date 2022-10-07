@@ -10,6 +10,6 @@ public class ConsumerClassExample {
         // lambda example
         // consumer class
         Consumer<String> con=(c)-> System.out.println(c);
-
+        name.forEach(con);
     }
 }
