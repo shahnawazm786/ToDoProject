@@ -9,12 +9,16 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class MyStepdefs {
     WebDriver driver=Hooks.driver;
-    List<WebElement> elements=null;
+    List<WebElement> elements=new ArrayList<>();
+    List<String> uniqueLink=null;
     @Given("search the link")
     public void searchTheLink() {
        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Vivo"+ Keys.ENTER);
@@ -22,14 +26,14 @@ public class MyStepdefs {
 
     @When("collect all text")
     public void collectAllText() {
-        elements= driver.findElements(By.tagName("a"));
-        Consumer<WebElement> consumer=(el)-> System.out.println(el);
+        elements= driver.findElements(By.xpath("//a"));
+        Consumer<WebElement> consumer=(el)-> System.out.println(el.getText());
         elements.forEach(consumer);
     }
 
     @Then("remove the duplicate text")
     public void removeTheDuplicateText() {
-        System.out.println("Hello");
+
     }
 
     @And("show the all unique contents")
