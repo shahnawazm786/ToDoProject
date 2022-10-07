@@ -14,6 +14,8 @@ public class ConsumerClassExampleInSelenium {
         WebDriver driver=new ChromeDriver();
         driver.get("https://amazon.in");
         List<WebElement> elements=driver.findElements(By.xpath("//a"));
-        
+        for(int i=0; i<elements.size();i++){
+            System.out.println(elements.get(i).getText());
+        }
     }
 }
