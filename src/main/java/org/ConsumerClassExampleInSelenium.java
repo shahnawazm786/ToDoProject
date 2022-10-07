@@ -27,5 +27,6 @@ public class ConsumerClassExampleInSelenium {
             }
         };
         elements.forEach(consumer1);
+        driver.quit();
     }
 }
