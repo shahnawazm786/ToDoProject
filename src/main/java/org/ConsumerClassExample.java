@@ -11,6 +11,10 @@ public class ConsumerClassExample {
         // consumer class
         Consumer<String> con=(c)-> System.out.println(c);
         //name.forEach(con);
-        name.forEach(c-> System.out.println(c));
+        //name.forEach(c-> System.out.println(c));
+        Consumer<String> con1=(c)->System.out.println(c.toUpperCase());
+        name.forEach(con1);
+        
+
     }
 }
