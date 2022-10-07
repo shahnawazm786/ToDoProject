@@ -28,6 +28,7 @@ public class Hooks {
     }
     @After
     public void cleanUp(){
-        
+        driver.manage().deleteAllCookies();
+        driver.quit();
     }
 }
