@@ -23,7 +23,7 @@ public class MobilePageObject {
 
     By mobileLink1=By.cssSelector("a[data-csa-c-content-id='nav_cs_mobiles']");
     By mobileAccessoriesLink=By.xpath("//a//span[text()='Mobile Accessories']");
-    By exploreByCateoryText=By.cssSelector("");
+    By exploreByCateoryText=By.cssSelector("//h2[text()='Shop by Category']");
     public void veifyMobileLink(){
         assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink1));
     }
@@ -32,5 +32,11 @@ public class MobilePageObject {
     }
     public void verifyCatoryText(){
         assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,catgoryText));
+    }
+    public void clickOnMobileAccessoriesLink(){
+        SeleniumCommonFunction.clickElement(driver,mobileAccessoriesLink);
+    }
+    public void verifyBySearchByCategory(){
+        assertEquals(true,SeleniumCommonFunction.isElementDisplayed(driver,exploreByCateoryText));
     }
 }

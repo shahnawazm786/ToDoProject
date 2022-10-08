@@ -30,4 +30,9 @@ public class SeleniumCommonFunction {
     public static void waitForElementVisibility(WebDriver driver, By locatory){
 
     }
+    public static void clickElement(WebDriver driver,By locator){
+        wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        wait.ignoring(NoSuchElementException.class, IllegalStateException.class);
+        wait.until(d->d.findElement(locator)).click();
+    }
 }

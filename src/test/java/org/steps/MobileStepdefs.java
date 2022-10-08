@@ -23,8 +23,8 @@ public class MobileStepdefs {
     public void user_click_on_mobile_accessories_click(){
 
     }
-    @Then("user verify explore by category")
-    public void user_verify_explore_by_category(){
+    @Then("user verify Shop by Category")
+    public void user_verify_Shop_by_Category(){
 
     }
 
