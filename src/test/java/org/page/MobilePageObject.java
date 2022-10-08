@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.utilities.SeleniumCommonFunction;
+
 import static org.testng.Assert.*;
 
 public class MobilePageObject {
@@ -19,6 +21,7 @@ public class MobilePageObject {
     private WebElement catgoryText;
 
     public void veifyMobileLink(){
-        assertEquals(true,true);
+        assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink));
     }
+    
 }

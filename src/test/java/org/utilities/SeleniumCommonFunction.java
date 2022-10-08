@@ -18,6 +18,12 @@ public class SeleniumCommonFunction {
         wait.ignoring(NoSuchElementException.class, IllegalStateException.class);
         return wait.until(d->d.findElement(locator).isDisplayed());
     }
+    public static boolean isElementDisplayed(WebDriver driver, WebElement element){
+        wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        wait.ignoring(NoSuchElementException.class, IllegalStateException.class);
+        return wait.until(d->element.isDisplayed());
+}
+
     public static void waitForElementVisibility(WebDriver driver, WebElement element){
 
     }
