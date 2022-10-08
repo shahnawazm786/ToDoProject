@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import static org.testng.Assert.*;
 
 public class MobilePageObject {
     WebDriver driver;
@@ -16,5 +17,8 @@ public class MobilePageObject {
     private WebElement mobileLink;
     @FindBy(xpath = "//span[text()='Category']")
     private WebElement catgoryText;
-    
+
+    public void veifyMobileLink(){
+        assertEquals();
+    }
 }
