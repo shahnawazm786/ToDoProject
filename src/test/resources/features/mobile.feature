@@ -9,4 +9,4 @@ Feature: Mobile Search
     Scenario: A user click on Mobile Accessories
       Given user see the mobile link
       When user click on mobile accessories click
-      Then user verify explore by category
+      Then user verify Shop by Category

@@ -22,6 +22,8 @@ public class MobilePageObject {
     private WebElement catgoryText;
 
     By mobileLink1=By.cssSelector("a[data-csa-c-content-id='nav_cs_mobiles']");
+    By mobileAccessoriesLink=By.xpath("//a//span[text()='Mobile Accessories']");
+    By exploreByCateoryText=By.cssSelector("");
     public void veifyMobileLink(){
         assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink1));
     }

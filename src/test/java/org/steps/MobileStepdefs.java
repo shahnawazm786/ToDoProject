@@ -25,7 +25,7 @@ public class MobileStepdefs {
     }
     @Then("user verify explore by category")
     public void user_verify_explore_by_category(){
-        
+
     }
 
 }
