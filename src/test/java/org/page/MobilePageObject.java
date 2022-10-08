@@ -19,6 +19,6 @@ public class MobilePageObject {
     private WebElement catgoryText;
 
     public void veifyMobileLink(){
-        assertEquals();
+        assertEquals(true,true);
     }
 }
