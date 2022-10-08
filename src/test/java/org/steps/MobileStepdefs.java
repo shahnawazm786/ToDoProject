@@ -13,11 +13,11 @@ public class MobileStepdefs {
     }
     @When("user click on mobile link")
     public void user_click_on_mobile_link(){
-
+    mobilePageObject.clickOnMobileLink();
     }
     @Then("user verify the category title")
     public void user_verify_the_category_title(){
-
+    mobilePageObject.verifyCatoryText();
     }
 
 }
