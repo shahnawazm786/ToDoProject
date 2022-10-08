@@ -21,11 +21,11 @@ public class MobileStepdefs {
     }
     @When("user click on mobile accessories click")
     public void user_click_on_mobile_accessories_click(){
-
+    mobilePageObject.clickOnMobileAccessoriesLink();
     }
     @Then("user verify Shop by Category")
     public void user_verify_Shop_by_Category(){
-
+    mobilePageObject.verifyBySearchByCategory();
     }
 
 }
