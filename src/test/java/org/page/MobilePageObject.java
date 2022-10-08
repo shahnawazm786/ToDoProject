@@ -28,4 +28,7 @@ public class MobilePageObject {
     public void clickOnMobileLink(){
         driver.findElement(mobileLink1).click();
     }
+    public void verifyCatoryText(){
+        assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,catgoryText));
+    }
 }
