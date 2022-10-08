@@ -1,5 +1,6 @@
 package org.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,10 +21,11 @@ public class MobilePageObject {
     @FindBy(xpath = "//span[text()='Category']")
     private WebElement catgoryText;
 
+    By mobileLink1=By.cssSelector("a[data-csa-c-content-id='nav_cs_mobiles']");
     public void veifyMobileLink(){
-        assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink));
+        assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink1));
     }
     public void clickOnMobileLink(){
-        
+        driver.findElement(mobileLink1).click();
     }
 }
