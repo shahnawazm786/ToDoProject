@@ -23,5 +23,7 @@ public class MobilePageObject {
     public void veifyMobileLink(){
         assertEquals(true, SeleniumCommonFunction.isElementDisplayed(driver,mobileLink));
     }
-    
+    public void clickOnMobileLink(){
+        
+    }
 }
