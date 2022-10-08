@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "org.steps",
-        tags = "@@mobilelink",
+        tags = "@mobilelink",
         monochrome = true,
         plugin = {"html:target/cucumber/report.html"}
 )
