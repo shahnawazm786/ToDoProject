@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "org.steps",
-        tags = "@mobile",
+        tags = "@mobileaccessories",
         monochrome = true,
         plugin = {
         // "pretty"
