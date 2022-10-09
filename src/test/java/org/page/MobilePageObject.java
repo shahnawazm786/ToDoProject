@@ -38,7 +38,7 @@ public class MobilePageObject {
         SeleniumCommonFunction.clickElement(driver,mobileAccessoriesLink);
     }
     public void verifyBySearchByCategory(){
-        //assertEquals(true,SeleniumCommonFunction.isElementDisplayed(driver,exploreByCategoryText));
-        assertFalse(true);
+        assertEquals(true,SeleniumCommonFunction.isElementDisplayed(driver,exploreByCategoryText));
+        //assertFalse(true);
     }
 }
