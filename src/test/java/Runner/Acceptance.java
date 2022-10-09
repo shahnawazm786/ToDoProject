@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@mobileaccessories",
         monochrome = true,
         plugin = {
-        // "pretty"
+         "pretty",
    //             "html:target/cucumber/cucumber-html-report.html",
    //             "json:target/cucumber/cucumber-json-report.json",
    //             "pretty",
