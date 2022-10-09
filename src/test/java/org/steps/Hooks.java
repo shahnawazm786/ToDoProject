@@ -31,12 +31,12 @@ public class Hooks {
     }
     @After
     public void cleanUp(Scenario scenario){
-        if(scenario.isFailed()){
+        //if(scenario.isFailed()){
             String name=scenario.getName().replace(" ","_");
             TakesScreenshot takesScreenshot=(TakesScreenshot) driver;
             byte[] screen=takesScreenshot.getScreenshotAs(OutputType.BYTES);
             scenario.attach(screen,"img/png",name);
-        }
+        //}
         driver.manage().deleteAllCookies();
         driver.quit();
     }
