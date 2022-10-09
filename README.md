@@ -1,4 +1,4 @@
-# * ToDoProject
+#  ToDoProject
 ToDoProject is project of Automation Framework using following as dependency
 
 * Java
