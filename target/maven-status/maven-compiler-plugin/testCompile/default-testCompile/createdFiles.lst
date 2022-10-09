@@ -1,0 +1,12 @@
+org\general\Page1.class
+org\utilities\ExplicitWaitManagment.class
+org\utilities\WaitStrategy.class
+org\general\MoveLeftToRight.class
+org\general\Page2.class
+org\steps\MobileStepdefs.class
+org\general\Page3.class
+org\utilities\SeleniumCommonFunction.class
+Runner\Acceptance.class
+org\steps\MyStepdefs.class
+org\steps\Hooks.class
+org\page\MobilePageObject.class

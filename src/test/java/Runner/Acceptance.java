@@ -8,9 +8,13 @@ import io.cucumber.testng.CucumberOptions;
         glue = "org.steps",
         tags = "@mobile",
         monochrome = true,
-        plugin = { "pretty",
-                "html:target/cucumber/cucumber-html-report.html",
-                "json:target/cucumber/cucumber-json-report.json"
+        plugin = {
+        // "pretty"
+   //             "html:target/cucumber/cucumber-html-report.html",
+   //             "json:target/cucumber/cucumber-json-report.json",
+                "pretty",
+                "html:target/cucumber/index.html",
+                "json:target/cucumber/cucumber.json"
         }
 )
 public class Acceptance extends AbstractTestNGCucumberTests {
