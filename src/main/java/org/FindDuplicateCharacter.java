@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class FindDuplicateCharacter {
     public static void main(String[] args) {
+    duplicateChar();
+    }
+    public static void duplicateChar(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter String");
         String str= scanner.nextLine();
