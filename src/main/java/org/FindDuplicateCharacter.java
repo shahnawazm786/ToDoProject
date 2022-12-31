@@ -1,6 +1,8 @@
 package org;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class FindDuplicateCharacter {
     public static void main(String[] args) {
@@ -19,6 +21,15 @@ public class FindDuplicateCharacter {
                 }
             }
         }
+
+    }
+
+    public static void duplicateChar1(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter String");
+        String str= scanner.nextLine();
+        System.out.println(str);
+        Set set=new HashSet();
 
     }
 }
