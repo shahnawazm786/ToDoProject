@@ -46,9 +46,11 @@ public static List<XSSFRow> getRow(XSSFSheet sheetName){
             rows.add((XSSFRow) row);
         return rows;
 }
-public static Map<String,HashMap<String,String>> convertRowIntoHashMapValue(List<XSSFRow> rows){
-    Map<String,HashMap<String,String>> maps=new HashMap<>();
+public static Map<String,String> convertRowIntoHashMapValue(List<XSSFRow> rows){
+    Map<String,String> maps=new HashMap<>();
+        for(Row row : rows){
 
+        }
         return maps;
 }
 
