@@ -20,12 +20,16 @@ public class ExcelReadingExample {
 
     }
 
-    public static void getSheet(String filePath,String sheetName) throws IOException {
+    public static XSSFSheet getSheet(String filePath,String sheetName) throws IOException {
         if(filePath.contains(".xlsx")){
          file=new File(filePath);
          inputStream=new FileInputStream(file);
          workbook=new XSSFWorkbook(inputStream);
-         
+         xssfSheet= workbook.getSheet(sheetName);
+         return xssfSheet;
+        }
+        else{
+            throw new IllegalStateException("File not found"+filePath);
         }
     }
 
