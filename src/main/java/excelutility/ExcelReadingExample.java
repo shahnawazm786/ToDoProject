@@ -1,5 +1,6 @@
 package excelutility;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -49,7 +50,9 @@ public static List<XSSFRow> getRow(XSSFSheet sheetName){
 public static Map<String,String> convertRowIntoHashMapValue(List<XSSFRow> rows){
     Map<String,String> maps=new HashMap<>();
         for(Row row : rows){
+            for(Cell cell:row){
 
+            }
         }
         return maps;
 }
