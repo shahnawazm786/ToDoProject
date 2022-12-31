@@ -1,6 +1,7 @@
 package excelutility;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -49,9 +50,26 @@ public static List<XSSFRow> getRow(XSSFSheet sheetName){
 }
 public static Map<String,String> convertRowIntoHashMapValue(List<XSSFRow> rows){
     Map<String,String> maps=new HashMap<>();
+    String val;
         for(Row row : rows){
             for(Cell cell:row){
-
+                switch (cell.getCellType()){
+                    case NUMERIC:
+                    val=String.valueOf(cell.getNumericCellValue());
+                    break;
+                    case STRING:
+                        val= cell.getStringCellValue();
+                        break;
+                    case BLANK:
+                        break;
+                    case BOOLEAN:
+                        val=String.valueOf(cell.getBooleanCellValue());
+                        break;
+                    case FORMULA:
+                        break;
+                    case _NONE:
+                        break;
+                }
             }
         }
         return maps;
