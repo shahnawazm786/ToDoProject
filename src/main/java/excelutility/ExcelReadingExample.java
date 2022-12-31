@@ -1,25 +1,26 @@
 package excelutility;
 
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ExcelReadingExample {
     static File file=null;
     static FileInputStream inputStream=null;
     static XSSFWorkbook workbook=null;
     static XSSFSheet xssfSheet=null;
-    Sheet sheet=null;
-    static XSSFRow row=null;
+   // Sheet sheet=null;
+   // static XSSFRow row=null;
     final String fileLocation="C:\\excel_file\\Orders.xlsx";
    static List<XSSFRow> rows=new ArrayList<>();
     public static void main(String[] args) {
@@ -45,6 +46,12 @@ public static List<XSSFRow> getRow(XSSFSheet sheetName){
             rows.add((XSSFRow) row);
         return rows;
 }
+public static Map<String,HashMap<String,String>> convertRowIntoHashMapValue(List<XSSFRow> rows){
+    Map<String,HashMap<String,String>> maps=new HashMap<>();
+
+        return maps;
+}
+
 
 
 }
