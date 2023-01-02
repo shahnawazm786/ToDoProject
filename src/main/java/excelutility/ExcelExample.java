@@ -27,7 +27,10 @@ public class ExcelExample {
         int row = sheet.getLastRowNum();
         for(int r=0; r<row;r++){
             int cell = sheet.getRow(r).getLastCellNum();
-            
+            for(int c=0;c<cell;c++){
+                System.out.print(sheet.getRow(r).getCell(c).getStringCellValue());
+            }
+            System.out.println();
         }
 
 
