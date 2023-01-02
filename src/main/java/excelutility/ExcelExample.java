@@ -17,7 +17,12 @@ public class ExcelExample {
     public void readExcelUsingLoop() throws IOException{
         inputStream=new FileInputStream(filePath);
         workbook=new XSSFWorkbook(inputStream);
-
+        if(workbook!=null){
+            sheet=workbook.getSheetAt(0);
+        }else
+        {
+            throw new FileNotFoundException("File not found ->"+filePath);
+        }
 
 
     }
