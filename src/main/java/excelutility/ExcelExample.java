@@ -13,10 +13,10 @@ public class ExcelExample {
     static XSSFWorkbook workbook;
     static XSSFSheet sheet;
     static FileInputStream inputStream;
-    static final String filePath="C:\\excel_file\\orders.xlsx";
+    static final String filePath="C:\\excel_file\\my_excel_file.xlsx";
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        readExcelUsingLoop();
     }
 
     public static void  readExcelUsingLoop() throws IOException{
@@ -32,7 +32,23 @@ public class ExcelExample {
         for(int r=0; r<row;r++){
             int cell = sheet.getRow(r).getLastCellNum();
             for(int c=0;c<cell;c++){
-                System.out.print(sheet.getRow(r).getCell(c).getStringCellValue());
+                //System.out.print(sheet.getRow(r).getCell(c).getStringCellValue());
+                switch (sheet.getRow(r).getCell(c).getCellType()){
+                    case STRING:
+                    case BLANK:
+                        System.out.print(sheet.getRow(r).getCell(c).getStringCellValue());
+                        break;
+                    case NUMERIC:
+                        System.out.print(sheet.getRow(r).getCell(c).getNumericCellValue());
+                        break;
+                    case BOOLEAN:
+                        System.out.print(sheet.getRow(r).getCell(c).getBooleanCellValue());
+                        break;
+                    case _NONE:
+                    case ERROR:
+                        break;
+
+                }
             }
             System.out.println();
         }
