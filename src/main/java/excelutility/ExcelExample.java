@@ -47,6 +47,9 @@ public class ExcelExample {
                     case _NONE:
                     case ERROR:
                         break;
+                    case FORMULA:
+                        System.out.print(sheet.getRow(r).getCell(c).getCellFormula());
+                        break;
 
                 }
             }
