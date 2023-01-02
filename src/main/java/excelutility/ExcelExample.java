@@ -52,6 +52,7 @@ public class ExcelExample {
                         break;
 
                 }
+                System.out.print("  |  ");
             }
             System.out.println();
         }
