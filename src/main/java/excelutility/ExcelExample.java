@@ -1,5 +1,6 @@
 package excelutility;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
@@ -23,6 +24,8 @@ public class ExcelExample {
         {
             throw new FileNotFoundException("File not found ->"+filePath);
         }
+        XSSFRow row = sheet.getRow(0);
+
 
 
     }
