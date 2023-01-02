@@ -10,7 +10,7 @@ public class ExcelExample {
     XSSFWorkbook workbook;
     XSSFSheet sheet;
     FileInputStream inputStream;
-    String final String filePath="C";
+    final String filePath="C";
     @Test
     public void readExcelUsingLoop(){
 
