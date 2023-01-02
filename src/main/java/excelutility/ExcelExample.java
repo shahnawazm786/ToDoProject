@@ -10,12 +10,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ExcelExample {
-    XSSFWorkbook workbook;
-    XSSFSheet sheet;
-    FileInputStream inputStream;
-    final String filePath="C:\\excel_file\\orders.xlsx";
-    @Test
-    public void readExcelUsingLoop() throws IOException{
+    static XSSFWorkbook workbook;
+    static XSSFSheet sheet;
+    static FileInputStream inputStream;
+    static final String filePath="C:\\excel_file\\orders.xlsx";
+
+    public static void main(String[] args) {
+
+    }
+
+    public static void  readExcelUsingLoop() throws IOException{
         inputStream=new FileInputStream(filePath);
         workbook=new XSSFWorkbook(inputStream);
         if(workbook!=null){
