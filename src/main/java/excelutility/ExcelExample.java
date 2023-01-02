@@ -24,7 +24,12 @@ public class ExcelExample {
         {
             throw new FileNotFoundException("File not found ->"+filePath);
         }
-        XSSFRow row = sheet.getRow(0);
+        int row = sheet.getLastRowNum();
+        for(int r=0; r<row;r++){
+            int cell = sheet.getRow(r).getLastCellNum();
+            
+        }
+
 
 
 
