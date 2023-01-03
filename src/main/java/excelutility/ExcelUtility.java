@@ -31,8 +31,8 @@ public class ExcelUtility {
         Sheet sheet = workbook.getSheet(sheetName);
         int lastRowNumber = sheet.getLastRowNum();
         for(int row=0; row<lastRowNumber;row++){
-            String key=sheet.getRow(row).getCell(0).getStringCellValue();
-            String value=sheet.getRow(row).getCell(1).getStringCellValue();
+            String key=sheet.getRow(row).getCell(keyColum).getStringCellValue();
+            String value=sheet.getRow(row).getCell(valueColumn).getStringCellValue();
             map.put(key,value);
         }
         return map;
