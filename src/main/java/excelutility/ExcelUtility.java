@@ -11,12 +11,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExcelUtility {
-    public Map<String,String> getData(String fileName,String sheetName) throws FileNotFoundException, IOException {
+    public static Map<String,String> getData(String fileName,String sheetName) throws FileNotFoundException, IOException {
         Map<String,String> map=new HashMap<>();
         FileInputStream inputStream=new FileInputStream(fileName);
         Workbook workbook=new XSSFWorkbook(inputStream);
         Sheet sheet = workbook.getSheet(sheetName);
         int lastRowNumber = sheet.getLastRowNum();
+        for(int row=0; row<lastRowNumber;row++){
+            String key=sheet.getRow(row).getCell(0).getStringCellValue();
+            String value=sheet.getRow(row).getCell(1).getStringCellValue();
+            map.put(key,value);
+        }
         return map;
     }
 }
